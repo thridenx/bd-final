@@ -1,9 +1,11 @@
 <?php
-    require('init.php');
-    require('ref.php');
-    include 'sessao.php';
-    $_SESSION['team_id'] = $_GET['team_id'];
-    include 'team-session.php';
+    
+require('init.php');
+require('ref.php');
+session_start();
+include 'sessao.php';
+$_SESSION['team_id'] = $_GET['team_id'];
+include 'team-session.php';
 ?>
 
 
@@ -11,15 +13,9 @@
 
     <body>
         <?php include 'header.php'?>
-            <h3 class="center">equipa 
-                <?php
+            <h3 class="center">equipa <?php
             echo $teamname;
-            echo $team_id;
-            ?>  <button class="indigo accent-4 btn col s2" id="perfilTeam">
-                                        <a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
-                
-                                    </button></h3>
-
+            ?> </h3>
             <div class="container">
                 <div class="row">
                     <div id="" class="teamchat col s4">

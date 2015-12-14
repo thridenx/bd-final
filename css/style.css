@@ -15,19 +15,11 @@
                 margin-bottom: 40px;
             }
             
-            #centrar,
-            .center {
+            #centrar {
                 text-align: center;
                 position: relative;
                 margin-left: auto;
                 margin-right: auto;
-            }
-            
-            .btn {
-                display: block;
-                width: 40%;
-                margin-left: auto;
-                margin-auto;
             }
             
             .login_input {
