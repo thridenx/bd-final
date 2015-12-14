@@ -1,7 +1,13 @@
 <?php 
-    require('ref.php');
+
     require('init.php');
+    require('ref.php');
+
+    include 'sessao.php';
+    include 'team-session.php';
+
     require('dadosEquipa.php');
+
     ?>
 
     <!DOCTYPE html>
@@ -32,10 +38,10 @@
                     <div id="col s6">
                         <h3>alterar equipa</h3>
                         <form id="registo" action="alterarRegistophpEquipa.php" method="post">
-                            <input name="name" class="registar_input" type="text" placeholder="nome da equipa" value="<? echo " $name "?>" maxlength="70">
+                            <input name="name" class="registar_input" type="text" placeholder="nome da equipa" value="<? echo  $name; ?>" maxlength="70">
                             <input name="password" class="registar_input" type="password" placeholder="* password" maxlength="16" required>
-                            <input name="workfield" class="registar_input" type="text" placeholder="área de trabalho" value="<? echo " $workfield "?>">
-                            <input name="skills" class="registar_input" type="text" placeholder="aptidões" value="<? echo " $skills "?>">
+                            <input name="workfield" class="registar_input" type="text" placeholder="área de trabalho" value="<? echo  $workfield; ?>">
+                            <input name="skills" class="registar_input" type="text" placeholder="aptidões" value="<? echo  $skills; ?>">
                             <input class="indigo accent-4 btn center" type="submit" value="registar">
 
                         </form>

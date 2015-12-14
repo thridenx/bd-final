@@ -2,6 +2,9 @@
     require('ref.php');
     require('init.php');
     require('dadosEquipa.php');
+    include 'sessao.php';
+    $_SESSION['team_id'] = $_GET['team_id'];
+    include 'team-session.php';
 
     $user_id_selected = $_POST['user_id'];    
     echo $user_id_selected;
