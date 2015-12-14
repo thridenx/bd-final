@@ -1,0 +1,145 @@
+            @import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+            @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+            body {
+                font-family: 'Roboto', sans-serif;
+                vertical-align: baseline;
+            }
+            
+            #titulo {
+                margin-top: 140px;
+                text-align: center;
+                font-size: 36px;
+                /*letter-spacing: 0.05px;*/
+                font-weight: bold;
+                /*text-decoration: underline;*/
+                margin-bottom: 40px;
+            }
+            
+            #centrar {
+                text-align: center;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .login_input {
+                margin-top: 10px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 15px;
+                border: 0px solid #ccc;
+                width: 285px;
+                height: 40px;
+                display: block;
+                /* background-color: rgba(255,255,100,0.1);
+    box-shadow: 1px 5px 8px #999999;*/
+                border: 3px solid;
+            }
+            
+            .button_input {
+                margin-top: 10px;
+                width: 305px;
+                height: 45px;
+                background-color: rgb(0, 0, 0);
+                color: white;
+                border: 0px solid #000000;
+                cursor: pointer;
+                font-size: 15px;
+            }
+            
+            .button2_input {
+                margin-top: 10px;
+                width: 305px;
+                height: 35px;
+                background-color: rgb(0, 0, 0);
+                color: white;
+                padding-top: 10px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 15px;
+            }
+            
+            .button2_input a {
+                color: white;
+                margin-top: 10px;
+                text-decoration: none;
+                font-size: 15px;
+            }
+            /*REGISTO////////////////////////////////////////////*/
+            
+            #tituloSec {
+                margin-top: 140px;
+                text-align: center;
+                font-size: 36px;
+                /*letter-spacing: 0.05px;*/
+                font-weight: bold;
+                /*text-decoration: underline;*/
+                margin-bottom: 40px;
+            }
+            
+            #centrar {
+                text-align: center;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+            }
+            
+            .registar_input {
+                margin-top: 10px;
+                margin-left: 3px;
+                margin-left: 3px;
+                padding-left: 18px;
+                border: 0px solid #ccc;
+                width: 285px;
+                height: 40px;
+                /* display: block;*/
+                /* background-color: rgba(255,255,100,0.1);
+    box-shadow: 1px 5px 8px #999999;*/
+                border: 3px solid;
+            }
+            
+            .registar_inputPeq {
+                margin-top: 10px;
+                margin-left: 3px;
+                margin-left: 3px;
+                padding-left: 18px;
+                border: 0px solid #ccc;
+                width: 309px;
+                height: 48px;
+                /* display: block;*/
+                /* background-color: rgba(255,255,100,0.1);
+    box-shadow: 1px 5px 8px #999999;*/
+                border: 3px solid;
+            }
+            
+            .registar_inputMed {
+                margin-top: 10px;
+                margin-left: 3px;
+                margin-left: 3px;
+                padding-left: 18px;
+                border: 0px solid #ccc;
+                width: 287px;
+                height: 42px;
+                /* display: block;*/
+                /* background-color: rgba(255,255,100,0.1);
+    box-shadow: 1px 5px 8px #999999;*/
+                border: 3px solid;
+            }
+            
+            nav a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            
+            #chatOutput {
+                height: 380px;
+                overflow-y: auto;
+            }
+            
+            .meeting-container {
+                height: 400px;
+                overflow-y: auto;
+            }
