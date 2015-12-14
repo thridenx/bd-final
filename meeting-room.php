@@ -40,9 +40,9 @@ if($result_meeting_query){
         <?php include 'header.php'?>
             <div class="container">
                 <div class="row">
-                    <h3 class="center">reunião <?php
+                    <h2 class="center">reunião <?php
             echo $meetingname;
-            ?> </h3>
+            ?> </h2>
                     <div id="meetingchat row">
                         <!--RECEBER O QUE FOI ESCRITO-->
                         <div id="chatOutput" class="col s12">

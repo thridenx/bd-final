@@ -11,19 +11,16 @@
 
     <body>
         <?php include 'header.php'?>
-            <h3 class="center">equipa 
+            <h5><a class="center col s4" href="perfilTeam.php/team_id=<? echo $team_id; ?>">Equipa 
                 <?php
             echo $teamname;
             echo $team_id;
-            ?>  <button class="indigo accent-4 btn col s2" id="perfilTeam">
-                                        <a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
-                
-                                    </button></h3>
+            ?></a></h5>
 
             <div class="container">
                 <div class="row">
                     <div id="" class="teamchat col s4">
-                        <h5 class="center">Chat</h5>
+                        <h4>Chat</h4><br><br>
                         <!--RECEBER O QUE FOI ESCRITO-->
                         <div id="chatOutput">
                             <?
@@ -49,7 +46,7 @@
                     </div>
 
                     <div id="meetings-register" class="col s4">
-                        <h5 class="center">Reuniões</h5>
+                        <h4>Reuniões</h4><br><br>
                         <form class="form-group" id="meeting" action="meeting-create.php" method="post">
                             <p>Criar reunião </p>
                             <input type="text" name="meetingname" placeholder="type the reunion name here" required>

@@ -55,7 +55,7 @@
                      $result_add_relationship = mysqli_query($db_select,$add_relationship);
                     if($result_add_relationship){
                         mysqli_query($db_select, "COMMIT");
-                        echo '<meta http-equiv="refresh" content="2; URL=team-view.php">';
+                        echo '<meta http-equiv="refresh" content="0; URL=team-view.php">';
                     }else{
                         mysqli_query($db_select, "ROLLBACK");
                         echo 'erro na ultima merda #pobres :(';
