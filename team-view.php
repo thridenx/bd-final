@@ -19,8 +19,10 @@
                     <li><a href="perfilUser.php">meu perfil</a></li>
 
 
-                    <li><a href="perfilTeam.php?team_id=<? echo $team_id; ?>">equipa 
-                    <?php echo $teamname.' '.$team_id.'  '; ?></a></li>
+                    <li><a href="perfilTeam.php?team_id=<? echo $team_id; ?>">Equipa  <?php echo $teamname.' '.$team_id.'  '; ?></a></li>
+
+                    </a>
+                    </li>
                     <li><a href="logout.php">logout</a></li>
                 </ul>
             </div>
@@ -60,7 +62,6 @@
                 <div id="meetings-register" class="col s4">
                     <h4>Reuniões</h4>
                     <br>
-                    <br>
                     <form class="form-group" id="meeting" action="meeting-create.php" method="post">
                         <h7>Criar reunião: </h7>
                         <input type="text" name="meetingname" placeholder="type the reunion name here" required>
@@ -75,14 +76,17 @@
                 </div>
                 <div id="schedule" class="col s4">
                     <h4>Mapa de Reuniões</h4>
-                    <br>
-                    <br>
+
                     <div class="meeting-container col s12">
                         <div class="meeting-cards" id="future-meetings">
-                            <p>Reuniões Futuras: </p>
-                            <ul class="collapsible" data-collapsible="accordion">
+                            <br>
+                            <br>
+                            <br>
+                            <p>
+                                <p>Reuniões Futuras: </p>
+                                <ul class="collapsible" data-collapsible="accordion">
 
-                                <?php
+                                    <?php
 
             $time = new DateTime('', new DateTimeZone('Europe/Lisbon')); 
             $time = $time->format('H:i');
@@ -115,7 +119,7 @@
             } 
 
             ?>
-                            </ul>
+                                </ul>
                         </div>
 
 

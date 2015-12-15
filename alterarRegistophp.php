@@ -25,11 +25,8 @@ if (($password2==$password3) and ($password1!='')){
 	    }
 
 	    if (sizeof($array) == 1) { 
-	    	if ($namePrev==''){ //VER SE É PARA ALTERAR OU NÃO
-				//echo "nome alterado:".$namePrev."<br>";
-				//echo "nome registado:".$nome."<br>";
+	    	if ($namePrev==''){
 				$namePrev=$nome;
-				//echo "nome que vai ser registado:".$namePrev;
 			}
 			if ($emailPrev==''){
 				$emailPrev=$email;
@@ -38,10 +35,7 @@ if (($password2==$password3) and ($password1!='')){
 				$websitePrev=$website;
 			}	
 			if (($password2=='') or ($password2==' ')){
-				//echo $password1;
-				//echo 'pass mudada:'.$password2;
 				$passwordPrev=$password1;
-				//echo 'pass nova:'.$passwordPrev;
 			}
 
 
@@ -54,28 +48,17 @@ if (($password2==$password3) and ($password1!='')){
 				echo 'alterado com sucesso! <meta http-equiv="refresh" content="0; URL=perfilUser.php">';
 
 			}else{
-				echo 'Ocorreu um erro, tente novamente!';
+				echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 			}
 		}
 		else{
-			echo "Password incorreta!";
+			echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 		}
 	
 	}
-	/*
-	else if (($password1!='')& ($password2!='')){
-		echo "Confirme a sua password atual e diga qual é a sua nova!";
-	}
-	else if (($password1!='')& ($password2!='') & ($password2!='')){
-		echo $password0;
-		echo $password2;
-		echo $
-		$passwordPrev=$password;
-		echo $passwordPrev;
-	}*/
 }
 else{
-	echo "Confirme a sua password!";
+	echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 }
 
 ?>

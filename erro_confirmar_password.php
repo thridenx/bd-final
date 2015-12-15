@@ -3,13 +3,12 @@ require('ref.php');
 require('init.php');
 ?>
 
-    <html>
+ <html>
 
     <body>
         <?php include 'header.php'?>
-            <h3> Ups, ocorreu um erro...</h3>
-            <h5>Confirme a password!</h5>
-            <a href="registo.php">voltar</a>
+    	<h3> Ups, ocorreu um erro...</h3>
+    	<h5>Confirme a password!</h5>
+    	<a href="index.php">voltar</a>
     </body>
-
-    </html>
+</html>

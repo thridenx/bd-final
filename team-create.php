@@ -14,7 +14,7 @@
         array_push($array2, $check2); 
     }
     if (sizeof($check2) >= 1) {
-        echo '<meta http-equiv="refresh" content="0; URL=erro_equipa_existente.php">';
+       echo '<meta http-equiv="refresh" content="0; URL=erro_equipa_existente.php">';
     }else{
         //cria um chat
         $insert_chat = "INSERT INTO chat(name) VALUES ('".$teamname."_chat')";

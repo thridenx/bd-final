@@ -1,5 +1,4 @@
 <?php
-
         require('init.php');
         require('ref.php');
         include 'sessao.php';
@@ -11,20 +10,26 @@
 
     <body>
         <div class="container" id="infTeam">
-            <div id="nome" class="center">
+            <div id="nome">
+                <br>
+                <br>
                 <h3><? echo $teamname; ?></h3>
             </div>
 
-            <div id="infGeral" class="center">
-                <div id="birth">área de trabalho:
+            <div id="infGeral">
+                <div id="birth">
+                    <br>
+                    <h5>área de trabalho:</h5>
                     <? echo  $workfield; ?>
                 </div>
                 <div id="skills">aptidões:
                     <? echo  $skills; ?>
                 </div>
 
-                <div id="membros">membros da equipa:
+                <div id="membros">
                     <br>
+                    <h5>membros da equipa:</h5>
+
                     <?
                 	 if (sizeof($arrayA)>=1){
                         
@@ -33,18 +38,20 @@
                         
                             $usernameU=htmlentities((string) $arrayA[$a][2],ENT_COMPAT,'UTF-8');
                             $b=$a+1;
-                            echo 'membro '.$b.': '.$nomeU."/ ";
-                            echo 'username: '.$usernameU."<br>";
+                            echo 'membro '.$b.': '.$nomeU."<br>";
+                            echo 'username: '.$usernameU."<br><br>";
                         }
                     }   
-
                 ?>
                 </div>
 
             </div>
 
-
-            <div class="indigo accent-4 btn center" id="alterar"><a href="alterarRegistoEquipa.php">alterar perfil</a></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="indigo accent-4 btn" id="alterar"><a href="alterarRegistoEquipa.php">alterar perfil</a></div>
 
 
         </div>

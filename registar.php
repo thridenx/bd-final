@@ -27,7 +27,7 @@ else{
 		$check = sizeof($array);
 		
 		if ($check >= 1) {
-            echo"<script language='javascript' type='text/javascript'>alert('Nome de utilizador já existente!');window.location.href='registo.php';</script>";
+            echo '<meta http-equiv="refresh" content="0; URL=erro_utilizador_existente.php">';
 		}else{
             echo 'valor de name'.$username;
 			$insert = "INSERT into user(name, username, email, password, birth, sex) VALUES ( '".$name."', '".$username."','".$email."', '".$password."','".$birth."','".$sex."');";
@@ -39,7 +39,7 @@ else{
                 echo 'supostamente registou';
                 echo $username;
 			}else{
-				echo 'Ocorreu um erro, tente novamente!';
+				echo '<meta http-equiv="refresh" content="0; URL=erro_inserir_pass_username.php">';
 			}
 		}
 	}
