@@ -23,20 +23,20 @@ include 'sessao.php';
                 <div class="container row">
                     <div id="new-team" class="row center  col-md-6">
                         <form id="registo-equipa" action="team-create.php" method="post">
-                            <h3>Registar uma nova equipa</h3>
+                            <h4>Registar uma nova equipa</h4>
                             <input name="teamname" class="registar_team" type="text" placeholder="* teamname" required>
                             <input name="workfield" class="registar_team" type="text" placeholder="* workfield" required>
-                            <input name="skills" class="registar_team" type="text" placeholder="* Write your team skills" required>
+                            <input name="skills" class="registar_team" type="text" placeholder="* Write your team skills" required><br><br><br>
                             <input class=" btn indigo accent-4 button7_input centrar" type="submit" value="Registar">
                     </div>
 
 
                     <div id="teamselection" class="row col-md-6">
-                        <h3 class="center">Entrar numa equipa existente</h3>
+                        <h4 class="center">Entrar numa equipa existente:</h4>
 
                         <ul class="collection with-header">
                             <li class="collection-header">
-                                <h5>Equipas existentes</h5></li>
+                                <h5>Equipas existentes:</h5></li>
                             <?
             $sql_get_teams = "SELECT user.name, team.name, team.team_id FROM user, team, team_user WHERE user.user_id=".$user_id." AND user.user_id = team_user.user_id AND team_user.team_id = team.team_id;";
             $results_found = mysqli_query($db_select, $sql_get_teams);
