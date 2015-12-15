@@ -13,7 +13,7 @@
         array_push($array2, $check2); 
     }
     if (sizeof($check2) >= 1) {
-        echo "<script language='javascript' type='text/javascript'>alert('Nome de equipa já existente!');window.location.href='registo.php';</script>";	
+        echo "<script language='javascript' type='text/javascript'>alert('Nome de equipa já existente!');window.location.href='registo.php';</script>"; 
     }else{
         
         
@@ -51,9 +51,7 @@
                 }
                 $result_insert_team = mysqli_query($db_select,$insert_team);
                 if($result_insert_team){
-                    $add_relationship ="
-                    INSERT into team_user( team_id, user_id)
-                    VALUES('".$team_id."', '". $user_id."') ";
+                    $add_relationship ="INSERT into team_user( team_id, user_id) VALUES('".$team_id."', '". $user_id."') ";
                      $result_add_relationship = mysqli_query($db_select,$add_relationship);
                     if($result_add_relationship){
                         mysqli_query($db_select, "COMMIT");

@@ -10,29 +10,33 @@
     <html>
 
     <body>
-        <?php include 'header.php'?>
-            <h3 class="center">equipa 
-                <?php
-            echo $teamname;
-            echo $team_id;
-            ?>  <button class="indigo accent-4 btn col s2" id="perfilTeam">
-                                        <a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
-                
-                                    </button></h3>
-
+        <nav class="indigo accent-4 navbar-fixed">
+    <div class="container-fluid nav-wrapper">
+        <a class="brand-logo" href="homepage.php">
+            slecky
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="perfilUser.php">meu perfil</a></li>
+            <li><a href="logout.php">logout</a></li>
+        </ul>
+         <h5 class="container-fluid nav-wrapper right hide-on-med-and-down"><a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Equipa 
+                        <?php echo $teamname.' '.$team_id.'  '; ?></a></h5>
+    </div>
+</nav>
+            
+            <br><br><br><br>
             <div class="container">
+            
                 <div class="row">
                     <div id="" class="teamchat col s4">
-                        <h5 class="center">Chat</h5>
-                        <!--RECEBER O QUE FOI ESCRITO-->
+                        <h4>Chat</h4><br>
+                        
                         <div id="chatOutput">
                             <?
                 include 'chatread.php';
                 ?>
                         </div>
-                        <br>
-                        <br>
-                        <br>
+                        
                         <form id="chat" action="chatwrite.php" method="post">
                             <div class="row">
                                 <input class="col s9" type="text" name="chatText" placeholder="type your text here" required>
@@ -49,23 +53,23 @@
                     </div>
 
                     <div id="meetings-register" class="col s4">
-                        <h5 class="center">Reuniões</h5>
+                        <h4>Reuniões</h4>
                         <form class="form-group" id="meeting" action="meeting-create.php" method="post">
-                            <p>Criar reunião </p>
+                            <br><br><h7>Criar reunião: </h7>
                             <input type="text" name="meetingname" placeholder="type the reunion name here" required>
                             <input type="date" class="datepicker" name="meetingdate" placeholder="select the date" required>
-                            <input type="time" name="meetingtime" placeholder="select the time" required>
+                            <input type="time" name="meetingtime" placeholder="select the time" required><br><br><br><br>
                             <input class="indigo accent-4 btn center" type="submit" id="entermeeting" value="Submit">
                             <?php echo '<input type="hidden" name="team_id" value="'.$team_id.'"/>'; ?>
 
                         </form>
                     </div>
                     <div id="schedule" class="col s4">
+                        <br><br>
                         <div class="meeting-container col s12">
                             <div class="meeting-cards" id="future-meetings">
-                                <p>Reuniões Futuras </p>
+                                <br><br><br><br><br><p><p>Reuniões Futuras: </p>
                                 <ul class="collapsible" data-collapsible="accordion">
-
                                     <?php
 
             $time = new DateTime('', new DateTimeZone('Europe/Lisbon')); 
@@ -106,7 +110,7 @@
 
 
                             <div class="meeting-cards" id="past-meetings">
-                                <p>Reuniões Passadas</p>
+                                Reuniões Passadas:</p>
                                 <ul class="collapsible" data-collapsible="accordion">
                                     <?php
             $time = new DateTime('', new DateTimeZone('Europe/Lisbon')); 

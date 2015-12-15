@@ -37,7 +37,7 @@ if (($password2==$password3) and ($password1!='')){
 			if ($websitePrev==''){
 				$websitePrev=$website;
 			}	
-			if ($password2==''){
+			if (($password2=='') or ($password2==' ')){
 				//echo $password1;
 				//echo 'pass mudada:'.$password2;
 				$passwordPrev=$password1;

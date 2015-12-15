@@ -1,0 +1,19 @@
+<?php 
+require('ref.php');
+require('init.php');
+
+?>
+
+ <html>
+
+    <body>
+        <?php include 'header.php'?>
+    	<h3> Ups, ocorreu um erro...</h3>
+    	<h5>Username, password e Nome têm de ser preenchidos!</h5>
+    	<a href="registar.php">voltar</a>
+
+
+
+    </body>
+
+</html>
