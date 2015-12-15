@@ -16,7 +16,7 @@
             echo $teamname;
             echo $team_id;
             ?>  <button class="indigo accent-4 btn col s2" id="perfilTeam">
-                                        <a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
+                                        <a href="perfilTeam.php?team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
                 
                                     </button></h3>
 

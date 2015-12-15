@@ -2,8 +2,8 @@
 
         require('init.php');
         require('ref.php');
-        $_SESSION['team_id'] = $_GET['team_id'];
         include 'sessao.php';
+        $_SESSION['team_id'] = $_GET['team_id'];
         include 'team-session.php';
         require('dadosEquipa.php');
         include 'header.php';
