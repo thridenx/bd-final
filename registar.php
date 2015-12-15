@@ -13,9 +13,8 @@ $sex=$_POST['sex'];
 //$user = stripslashes($username);
 echo $username;
 
-if ($username=='' or $password=='' or $name==''){ //Certificar mesmo que não acontece 
-	echo 'Username, password e Nome têm de ser preenchidos!
-	<meta http-equiv="refresh" content="2; URL=registo.php">';
+if ($username=='' or $password=='' or $name=='' or $username==' ' or $password==' ' or $name==' '){ //Certificar mesmo que não acontece 
+	echo '<meta http-equiv="refresh" content="2; URL=erro_inserir_pass_username.php">';
 }
 else if($password!=$password2){
 	echo 'Confirme novamente a sua password!
@@ -35,7 +34,8 @@ else{
 		$check = sizeof($array);
 		echo $check;
 		if ($check >= 1) {
-			echo"<script language='javascript' type='text/javascript'>alert('Nome de utilizador já existente!');window.location.href='registo.php';</script>";	
+			echo"<script language='javascript' type='text/javascript'>alert('Nome de utilizador já existente!');window.location.href='registo.php';</script>";
+			echo "inscrito com sucesso";	
 		}else{
 			$insert = "INSERT into user(name, username, email, password, birth, sex)
 			VALUES ('".$name."', '".$username."','".$email."', '".$password."','".$birth."','".$sex."');";
