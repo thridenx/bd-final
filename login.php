@@ -38,6 +38,8 @@ else{
         }
     }else{
         echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
+        //não consegue aceder à base de dados
+        
   }
 }
 ?>
