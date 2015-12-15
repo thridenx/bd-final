@@ -21,16 +21,18 @@
         else if ($searchq=''){
             $output='';
         }else{
-            $output .= '<form class="" action="addteam.php" method="POST">';
+            
             $i = 0;
             while ($row=mysqli_fetch_array($query)) {
                 $fuser=$row['username'];
                 $fuser_id=$row['user_id'];
+                $output .= '<form class="" action="addteam.php" method="POST">';
                 $output .='<p><input class="indigo accent-4 btn" type="submit" name="username" value="'.$fuser.'"></p>';
                 $output .= '<input type="hidden" name="user_id" value="'.$fuser_id.'">';
+                
+            $output.='</form>';
                 $i++;
             }
-            $output.='</form>';
         }
     }
                             
