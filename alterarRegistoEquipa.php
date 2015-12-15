@@ -21,7 +21,7 @@
                 $.post("search.php", {
                     searchVal: searchqText
                 }, function (output) {
-                    $("#output").html(output);
+                    $("#output").html(output)
                 });
             }
         </script>
@@ -33,6 +33,9 @@
                 <div class="row">
 
 
+                    <br>
+                    <br>
+                    <br>
 
 
                     <div id="col s6">
@@ -42,6 +45,8 @@
                             <input name="password" class="registar_input" type="password" placeholder="* password" maxlength="16" required>
                             <input name="workfield" class="registar_input" type="text" placeholder="área de trabalho" value="<? echo  $workfield; ?>">
                             <input name="skills" class="registar_input" type="text" placeholder="aptidões" value="<? echo  $skills; ?>">
+                            <br>
+                            <br>
                             <input class="indigo accent-4 btn center" type="submit" value="registar">
 
                         </form>

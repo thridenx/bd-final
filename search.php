@@ -6,17 +6,13 @@
     include 'team-session.php';
 
     require('dadosEquipa.php');
-
+    
     $output='';
-    if (isset($_POST['searchVal'])){
+    if (isset($_POST['searchVal']) and $_POST['searchVal'] != ''){
         $searchq=$_POST['searchVal'];
-        //echo $searchq;
       	$searchq=preg_replace("#[^0-9a-z]#i", "", $searchq);
-     //  $query=mysqli_query("SELECT username, email, name FROM user WHERE username like '%'".$searchq."'%' or name like '%''".$searchq."'%' or email like '%''".$searchq."'%'");
-        //$query=mysqli_query($db_select,"SELECT username, email, name FROM user WHERE username like '%a%' or name like '%a%' or email like '%a%'");
-        $query=mysqli_query($db_select,"SELECT DISTINCT user.username, user.user_id FROM user, team_user WHERE user.username like '%$searchq%'and user.user_id = team_user.user_id and team_id NOT IN ( SELECT team_id from team where team_id = ".$team_id.")";
-                            
-        
+        $query=mysqli_query($db_select,"SELECT DISTINCT user.username, user.user_id FROM user,team_user WHERE user.username like '%$searchq%' and user.user_id NOT IN (SELECT team_user.user_id from team_user where team_id=".$team_id.");");
+
         $count=mysqli_num_rows($query);
         //var_dump($query);
         if ($count == 0){
@@ -37,5 +33,6 @@
             $output.='</form>';
         }
     }
+                            
     echo $output;
     ?>

@@ -27,16 +27,7 @@
             if (mysqli_query($db_select, $insert_chat)) {
                 $last_id = mysqli_insert_id($db_select);
             }
-            /*
-            //buscar nome 
-            $select_chat_id ="SELECT chat_id FROM chat WHERE name='".$teamname."_chat' ";
-            $check = mysqli_query($db_select,$select_chat_id);
-            $array3= array();
-                while($check_number =mysqli_fetch_array($check)){
-                    array_push($array3, $check_number); 
-             }
-    
-            if(sizeof($check_number)>=1){*/
+        
             if ($last_id!=''){
                 $array= array();
                 while($count =mysqli_fetch_array($check)){
@@ -51,8 +42,7 @@
                 }
                 $result_insert_team = mysqli_query($db_select,$insert_team);
                 if($result_insert_team){
-                    $add_relationship ="
-                    INSERT into team_user( team_id, user_id)
+                    $add_relationship ="INSERT into team_user( team_id, user_id)
                     VALUES('".$team_id."', '". $user_id."') ";
                      $result_add_relationship = mysqli_query($db_select,$add_relationship);
                     if($result_add_relationship){

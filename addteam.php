@@ -5,7 +5,7 @@
     include 'sessao.php';
     $_SESSION['team_id'] = $_GET['team_id'];
     include 'team-session.php';
-
+mysqli_query($db_select, 'SET AUTOCOMMIT=0');
     $user_id_selected = $_POST['user_id'];    
     echo $user_id_selected;
     $addtoteam_query = "INSERT into team_user (team_id, user_id) VALUES ('".$team_id."', '".$user_id_selected."');";

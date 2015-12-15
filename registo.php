@@ -21,7 +21,7 @@ require('init.php');
 
                 <input name="birth" class="registar_inputMed" type="date" min="1900-01-01" max="2015-01-01" value="2015-01-01" required>
                 <input name="password" class="registar_input" type="password" placeholder="* password" maxlength="16" required>
-                 <input name="email" class="registar_input" type="email" placeholder="email" maxlength="80">
+                <input name="email" class="registar_input" type="email" placeholder="email" maxlength="80">
                 <input name="password2" class="registar_input" type="password" placeholder="* confirmar password" maxlength="16" required>
                 <input name="website" class="registar_input" type="text" placeholder="website">
 

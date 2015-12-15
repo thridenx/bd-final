@@ -9,14 +9,11 @@ $email=$_POST['email'];
 $birth=$_POST['birth'];
 $sex=$_POST['sex'];
 error_reporting(E_ALL);
-mysqli_query($db_select, 'SET AUTOCOMMIT=0');
-//$user = stripslashes($username);
-echo $username;
 if ($username=='' or $password=='' or $name=='' or $username==' ' or $password==' ' or $name==' '){ //Certificar mesmo que não acontece 
 	echo '<meta http-equiv="refresh" content="2; URL=erro_inserir_pass_username.php">';
 }
 else if($password!=$password2){
-echo '<meta http-equiv="refresh" content="2; URL=erro_confirmar_password.php">'
+echo '<meta http-equiv="refresh" content="2; URL=erro_confirmar_password.php">';
 }
 else{
 	/*Verificar se o username já existe*/
@@ -32,13 +29,15 @@ else{
 		if ($check >= 1) {
             echo"<script language='javascript' type='text/javascript'>alert('Nome de utilizador já existente!');window.location.href='registo.php';</script>";
 		}else{
-			$insert = "INSERT into user(name, username, email, password, birth, sex)
-			VALUES( '".$name."', '".$username."','".$email."', '".$password."','".$birth."','".$sex."');";
+            echo 'valor de name'.$username;
+			$insert = "INSERT into user(name, username, email, password, birth, sex) VALUES ( '".$name."', '".$username."','".$email."', '".$password."','".$birth."','".$sex."');";
 				
 			$sql=mysqli_query($db_select, $insert);
 			
 			if ($sql){
 				echo '<meta http-equiv="refresh" content="0; URL=index.php">';
+                echo 'supostamente registou';
+                echo $username;
 			}else{
 				echo 'Ocorreu um erro, tente novamente!';
 			}
