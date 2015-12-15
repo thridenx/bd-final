@@ -13,7 +13,7 @@
         array_push($array2, $check2); 
     }
     if (sizeof($check2) >= 1) {
-        echo "<script language='javascript' type='text/javascript'>alert('Nome de equipa já existente!');window.location.href='registo.php';</script>";	
+        echo '<meta http-equiv="refresh" content="0; URL=erro_equipa_existente.php">';
     }else{
         
         

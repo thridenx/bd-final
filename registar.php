@@ -30,8 +30,7 @@ else{
 		$check = sizeof($array);
 		
 		if ($check >= 1) {
-			echo"<script language='javascript' type='text/javascript'>
-		window.location.href='erro_utilizador_existente.php';</script>";
+			echo '<meta http-equiv="refresh" content="0; URL=erro_utilizador_existente.php">';
 
 		}else{
 			$insert = "INSERT into user(name, username, email, password, birth, sex)
