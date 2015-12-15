@@ -10,10 +10,10 @@ $birth=$_POST['birth'];
 $sex=$_POST['sex'];
 error_reporting(E_ALL);
 if ($username=='' or $password=='' or $name=='' or $username==' ' or $password==' ' or $name==' '){ //Certificar mesmo que não acontece 
-	echo '<meta http-equiv="refresh" content="2; URL=erro_inserir_pass_username.php">';
+	echo '<meta http-equiv="refresh" content="0; URL=erro_inserir_pass_username.php">';
 }
 else if($password!=$password2){
-echo '<meta http-equiv="refresh" content="2; URL=erro_confirmar_password.php">';
+echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 }
 else{
 	/*Verificar se o username já existe*/

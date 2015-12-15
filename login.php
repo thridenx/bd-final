@@ -4,7 +4,7 @@ require('init.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 if ($username=='' or $password==''or $username==' ' or $password==' '){ //Certificar mesmo que não acontece 
-    echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
+    echo '<meta http-equiv="refresh" content="0; URL=erro_login.php">';
 }
 else{
     $sql = "SELECT user_id, sex  FROM user WHERE username = '".$username."' and password = '".$password."' ";
@@ -25,10 +25,10 @@ else{
             echo '<meta http-equiv="refresh" content="0; URL=homepage.php">';
         }
         else{
-          echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
+          echo '<meta http-equiv="refresh" content="0; URL=erro_login.php">';
         }
     }else{
-        echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
+        echo '<meta http-equiv="refresh" content="0; URL=erro_login.php">';
   }
 }
 ?>
