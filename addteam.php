@@ -17,7 +17,7 @@
             echo '<meta http-equiv="refresh" content="0; URL=team-view.php">';
         }else{
             mysqli_query($db_select, "ROLLBACK");
-            echo 'erro na ultima merda #pobres :('; 
+            echo '<meta http-equiv="refresh" content="0; URL=erro_inserir_naequipa.php">';
         }
 
     

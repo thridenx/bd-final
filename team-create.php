@@ -6,6 +6,7 @@
     $skills=$_POST['skills'];
     error_reporting(E_ALL);
     mysqli_query($db_select, 'SET AUTOCOMMIT=0');
+    
     $verificar = "SELECT * FROM team WHERE name = '".$teamname."'";
     $result = mysqli_query($db_select,$verificar);
     $array2= array();
@@ -60,19 +61,19 @@
                         echo '<meta http-equiv="refresh" content="0; URL=team-view?team_id='".$team_id."'.php">';
                     }else{
                         mysqli_query($db_select, "ROLLBACK");
-                        echo 'erro na ultima merda #pobres :(';
+                        echo '<meta http-equiv="refresh" content="0; URL=erro_criar_equipa.php">';
                     }
                 }else{
                     mysqli_query($db_select, "ROLLBACK");
-                    echo 'erro a criar team';
+                    echo '<meta http-equiv="refresh" content="0; URL=erro_criar_equipa.php">';
                 }
             }else{
                 mysqli_query($db_select, "ROLLBACK");
-                echo 'erro a buscar id do chat';
+                echo '<meta http-equiv="refresh" content="0; URL=erro_criar_equipa.php">';
             }
         }else{
             mysqli_query($db_select, "ROLLBACK");
-            echo 'erro a inserir chat, erro';
+            echo '<meta http-equiv="refresh" content="0; URL=erro_criar_equipa.php">';
         }
     }
 ?>
