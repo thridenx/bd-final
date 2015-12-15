@@ -27,6 +27,7 @@
                 $fuser=$row['username'];
                 $fuser_id=$row['user_id'];
                 $output .= '<form class="" action="addteam.php" method="POST">';
+                $output .='<p><input type="hidden" name="team_id" value="'.$team_id.'"></p>';
                 $output .='<p><input class="indigo accent-4 btn" type="submit" name="username" value="'.$fuser.'"></p>';
                 $output .= '<input type="hidden" name="user_id" value="'.$fuser_id.'">';
                 

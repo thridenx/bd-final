@@ -3,7 +3,7 @@
     require('init.php');
     require('dadosEquipa.php');
     include 'sessao.php';
-    $_SESSION['team_id'] = $_GET['team_id'];
+    $_SESSION['team_id'] = $_POST['team_id'];
     include 'team-session.php';
 mysqli_query($db_select, 'SET AUTOCOMMIT=0');
     $user_id_selected = $_POST['user_id'];    
@@ -16,9 +16,7 @@ mysqli_query($db_select, 'SET AUTOCOMMIT=0');
             echo '<meta http-equiv="refresh" content="0; URL=team-view.php?team_id='.$team_id.'">';
         }else{
             mysqli_query($db_select, "ROLLBACK");
-            echo $team_id;
-            echo $user_id_selected;
-             //echo '<meta http-equiv="refresh" content="9; URL=erro_inserir_naequipa.php">';
+             echo '<meta http-equiv="refresh" content="9; URL=erro_inserir_naequipa.php">';
         }
     
     ?>

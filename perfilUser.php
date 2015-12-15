@@ -7,40 +7,52 @@
         require('ref.php');
         include 'sessao.php';
         require('dados.php');
+        include 'header.php';
     ?>
 
     <body>
-        <? include 'header.php'; ?>
-            <div class="container" id="infUser">
-                <div id="nome" class="center">
-                    <? echo "$nome"?>
-                </div>
-                <!--TITULO-->
+        <div id="infUser" class="container">
+            <div id="nome">
+                <br>
+                <br>
+                <h3><? echo "$nome"?></h3>
+            </div>
+            <!--TITULO-->
+            <div id="username">
+                <h5>
+                <? echo "$username"?></h5>
+            </div>
 
-                <div id="username" class="center">
-                    <? echo "$username"?>
-                </div>
-                <div id="infGeral" class="center">
-                    <div id="sex">sexo:
+            <div id="infGeral">
+                <ul class="collection">
+                    <li class="collection-item">
+                        <h6>sexo:</h6>
                         <? echo " $sex"?>
-                    </div>
-                    <div id="birth">data de nascimento:
+                    </li>
+                    <li class="collection-item">
+                        <h6>data de nascimento:</h6>
                         <? echo " $birth"?>
-                    </div>
-                    <div id="email">e-mail:
+                    </li>
+                    <li class="collection-item">
+                        <h6>e-mail:</h6>
                         <? echo " $email"?>
-                    </div>
-                    <div id="website">website:
+                    </li>
+                    <li class="collection-item">
+                        <h6>website:</h6>
                         <? echo " $website"?>
-                    </div>
-                    <div id="equipas">equipas a que pertence:
+                    </li>
+                    <li class="collection-item">
+                        <h6>equipas a que pertence:</h6>
                         <? echo " $equipas"?>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
-            </div>
+            <div class="indigo accent-4 btn" id="alterar"><a href="alterarRegisto.php">alterar perfil</a></div>
+        </div>
 
-            <div class="indigo accent-4 btn center" id="alterar"><a href="alterarRegisto.php">alterar perfil</a></div>
+
+
+
     </body>
 
 </html>
