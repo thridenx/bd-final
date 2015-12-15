@@ -9,9 +9,9 @@ require('init.php');
     <body>
         <div id="centrar">
             <div id="tituloSec">registo</div>
-            <form id="registo" class="input-field" action="registar.php" method="post">
+            <form class="row col s6" action="registar.php" method="post">
 
-
+            <div id="form" class="input-field">    
                 <input name="name" class="registar_input" type="text" placeholder="* nome" maxlength="70" required>
                 <input name="username" class="registar_input" type="text" placeholder="* username" maxlength="70" required>
                 <select name="sex" class="registar_inputPeq" maxlength="10">
@@ -28,6 +28,7 @@ require('init.php');
 
 
                 <input class="indigo accent-4 btn" class="button_input" type="submit" value="registar">
+            </div>
             </form>
         </div>
     </body>

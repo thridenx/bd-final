@@ -17,30 +17,34 @@
             </div>
             <!--TITULO-->
             <div id="username"><h5>
-                <? echo "$username"?></h5><br>
+                <? echo "$username"?></h5>
             </div>
-            <ul class="collection">
+            
             <div id="infGeral">
-                <li class="collection-item"><div id="sex"><h6>sexo:</h6>
-                    <? echo " $sex"?>
-                </div></li>
-                <li class="collection-item"><div id="birth"><h6>data de nascimento:</h6>
-                    <? echo " $birth"?>
-                </div></li>
-                <li class="collection-item"><div id="email"><h6>e-mail:</h6>
-                    <? echo " $email"?>
-                </div></li>
-                <li class="collection-item"><div id="website"><h6>website:</h6>
-                    <? echo " $website"?>
-                </div></li>
-                <li class="collection-item"><div id="equipas"><h6>equipas a que pertence:</h6>
-                    <? echo " $equipas"?>
-                </div></li>
+                <ul class="collection">
+                    <li class="collection-item"><h6>sexo:</h6>
+                        <? echo " $sex"?>
+                    </li>
+                    <li class="collection-item"><h6>data de nascimento:</h6>
+                        <? echo " $birth"?>
+                    </li>
+                    <li class="collection-item"><h6>e-mail:</h6>
+                        <? echo " $email"?>
+                    </li>
+                    <li class="collection-item"><h6>website:</h6>
+                        <? echo " $website"?>
+                    </li>
+                    <li class="collection-item"><h6>equipas a que pertence:</h6>
+                        <? echo " $equipas"?>
+                    </li>
+                </ul>
             </div>
+         <div class="indigo accent-4 btn" id="alterar"><a href="alterarRegisto.php">alterar perfil</a></div>    
         </div>
-        </div>
+        
 
-        <div id="alterar"><a href="alterarRegisto.php">alterar perfil</a></div>
+       
+    
     </body>
 
 </html>
