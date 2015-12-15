@@ -24,9 +24,9 @@
     </div>
 </nav>
             
-        
+            <br><br><br><br>
             <div class="container">
-            <br><br>
+            
                 <div class="row">
                     <div id="" class="teamchat col s4">
                         <h4>Chat</h4><br>
@@ -36,9 +36,7 @@
                 include 'chatread.php';
                 ?>
                         </div>
-                        <br>
-                        <br>
-                        <br>
+                        
                         <form id="chat" action="chatwrite.php" method="post">
                             <div class="row">
                                 <input class="col s9" type="text" name="chatText" placeholder="type your text here" required>
@@ -60,7 +58,7 @@
                             <br><br><h7>Criar reunião: </h7>
                             <input type="text" name="meetingname" placeholder="type the reunion name here" required>
                             <input type="date" class="datepicker" name="meetingdate" placeholder="select the date" required>
-                            <input type="time" name="meetingtime" placeholder="select the time" required><br><br>
+                            <input type="time" name="meetingtime" placeholder="select the time" required><br><br><br><br>
                             <input class="indigo accent-4 btn center" type="submit" id="entermeeting" value="Submit">
                             <?php echo '<input type="hidden" name="team_id" value="'.$team_id.'"/>'; ?>
 
@@ -70,7 +68,7 @@
                         <br><br>
                         <div class="meeting-container col s12">
                             <div class="meeting-cards" id="future-meetings">
-                                <br><br><br><br><p><p>Reuniões Futuras: </p>
+                                <br><br><br><br><br><p><p>Reuniões Futuras: </p>
                                 <ul class="collapsible" data-collapsible="accordion">
                                     <?php
 
