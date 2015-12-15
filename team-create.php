@@ -59,6 +59,7 @@
                     if($result_add_relationship){
                         mysqli_query($db_select, "COMMIT");
                         echo $team_id;
+                        
                         echo '<meta http-equiv="refresh" content="0; URL=team-view?team_id="'.$team_id.'".php">';
                     }else{
                         mysqli_query($db_select, "ROLLBACK");

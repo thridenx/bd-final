@@ -11,7 +11,7 @@
 
     <body>
         <div class="container" id="infTeam">
-            <div id="nome" class="center">
+            <div id="nome">
                 <h3><? echo $teamname; ?></h3>
             </div>
 
@@ -44,7 +44,7 @@
             </div>
 
 
-            <div class="indigo accent-4 btn center" id="alterar"><a href="alterarRegistoEquipa.php">alterar perfil</a></div>
+            <div class="indigo accent-4 btn" id="alterar"><a href="alterarRegistoEquipa.php">alterar perfil</a></div>
 
 
         </div>
