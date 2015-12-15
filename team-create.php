@@ -24,8 +24,8 @@
         $result_inserir_chat = mysqli_query($db_select, $insert_chat);
         
         if($result_inserir_chat){
-        
-            if (mysqli_query($db_select, $insert_chat)) {
+            $last_id = mysqli_insert_id($db_select);
+            /*if (mysqli_query($db_select, $insert_chat)) {
                 $last_id = mysqli_insert_id($db_select);
             }
             /*
@@ -47,18 +47,19 @@
                 
                 $insert_team = "INSERT into team(name, chat_id, workfield, skills)
                 VALUES ('".$teamname."', '".$last_id."', '".$workfield."' , '".$skills."')";
-                if (mysqli_query($db_select, $insert_team)) {
+                $result_insert_team = mysqli_query($db_select,$insert_team);
+                if ($result_insert_team) {
                     $team_id = mysqli_insert_id($db_select);
                 }
-                $result_insert_team = mysqli_query($db_select,$insert_team);
+                //$result_insert_team = mysqli_query($db_select,$insert_team);
                 if($result_insert_team){
                     $add_relationship ="
-                    INSERT into team_user( team_id, user_id)
-                    VALUES('".$team_id."', '". $user_id."') ";
+                    INSERT into team_user( team_id, user_id) VALUES('".$team_id."', '". $user_id."') ";
                      $result_add_relationship = mysqli_query($db_select,$add_relationship);
                     if($result_add_relationship){
                         mysqli_query($db_select, "COMMIT");
-                        echo '<meta http-equiv="refresh" content="0; URL=team-view?team_id='".$team_id."'.php">';
+                        echo $team_id;
+                        echo '<meta http-equiv="refresh" content="0; URL=team-view?team_id="'.$team_id.'".php">';
                     }else{
                         mysqli_query($db_select, "ROLLBACK");
                         echo '<meta http-equiv="refresh" content="0; URL=erro_criar_equipa.php">';

@@ -17,21 +17,15 @@
         </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="perfilUser.php">meu perfil</a></li>
+                     <li><a href="perfilTeam.php?team_id=<? echo $team_id; ?>">Equipa 
+                        <?php echo $teamname.' '.$team_id.'  '; ?></a></li>
                     <li><a href="logout.php">logout</a></li>
                 </ul>
-                <h5 class="container-fluid nav-wrapper right hide-on-med-and-down"><a href="perfilTeam.php/team_id=<? echo $team_id; ?>">Equipa 
-                        <?php echo $teamname.' '.$team_id.'  '; ?></a></h5>
+               
             </div>
         </nav>
 
-        <h5><a class="center col s4" href="perfilTeam.php?team_id=<? echo $team_id; ?>">Equipa 
-                <?php
-            echo $teamname;
-            echo $team_id;
-            ?>  <button class="indigo accent-4 btn col s2" id="perfilTeam">
-                                        <a href="perfilTeam.php?team_id=<? echo $team_id; ?>">Perfil da Equipa</a>
-                
-                                    </button></h3>
+        
 <br><br><br><br>
             <div class="container">
                 
@@ -60,7 +54,7 @@
             </div>
 
             <div id="meetings-register" class="col s4">
-                <h4>Reuniões</h4><br><br>
+                <h4>Reuniões</h4><br>
                 <form class="form-group" id="meeting" action="meeting-create.php" method="post">
                     <br><br><h7>Criar reunião: </h7>
                     <input type="text" name="meetingname" placeholder="type the reunion name here" required>
@@ -72,10 +66,10 @@
                 </form>
             </div>
             <div id="schedule" class="col s4">
-                <h4>Mapa de Reuniões</h4><br><br>
+                <h4>Mapa de Reuniões</h4>
                 <div class="meeting-container col s12">
                     <div class="meeting-cards" id="future-meetings">
-                        <br><br><br><br><br><p><p>Reuniões Futuras: </p>
+                        <br><br><br><p><p>Reuniões Futuras: </p>
                         <ul class="collapsible" data-collapsible="accordion">
 
                             <?php
