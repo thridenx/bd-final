@@ -6,9 +6,8 @@ require('init.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($username=='' or $password==''){ //Certificar mesmo que não acontece 
-    echo 'Username e Password têm de ser preenchidos!
-    <meta http-equiv="refresh" content="2; URL=index.php">';
+if ($username=='' or $password=='' or $username==' ' or $password==' '){ //Certificar mesmo que não acontece 
+    echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
 }
 else{
     $sql = "SELECT user_id, sex  FROM user WHERE username = '".$username."' and password = '".$password."' ";
@@ -35,10 +34,10 @@ else{
         }
 
         else{
-          header("Location: naoexiste.php");
+          echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
         }
     }else{
-        echo 'nao consegue selecionar';
+        echo '<meta http-equiv="refresh" content="2; URL=erro_login.php">';
   }
 }
 ?>
