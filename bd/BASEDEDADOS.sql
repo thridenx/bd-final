@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Dec 10, 2015 at 01:08 AM
+-- Generation Time: Dec 15, 2015 at 10:52 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -23,15 +23,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `chat` (
   `chat_id` int(11) NOT NULL,
   `name` varchar(11) COLLATE latin1_general_cs DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Dumping data for table `chat`
---
-
-INSERT INTO `chat` (`chat_id`, `name`) VALUES
-(1, '0'),
-(2, 'teamchat');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
 
@@ -47,15 +39,9 @@ CREATE TABLE `meeting` (
   `name` varchar(30) COLLATE latin1_general_cs NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Dumping data for table `meeting`
---
-
-INSERT INTO `meeting` (`meeting_id`, `user_id`, `team_id`, `chat_id`, `name`, `date`, `time`, `creation`) VALUES
-(1, 2, 5, 2, 'Reunião de Emprego', '2015-12-09', '07:00:00', '2015-12-08 01:43:03');
+  `creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `active` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
 
@@ -95,14 +81,7 @@ CREATE TABLE `team` (
   `chat_id` int(11) NOT NULL,
   `workfield` varchar(30) COLLATE latin1_general_cs NOT NULL,
   `skills` text COLLATE latin1_general_cs NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Dumping data for table `team`
---
-
-INSERT INTO `team` (`team_id`, `name`, `chat_id`, `workfield`, `skills`) VALUES
-(5, 'teamarizona', 1, 'design', 'graphic design and coding skillz');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
 
@@ -114,16 +93,7 @@ CREATE TABLE `team_user` (
   `relacao_id` int(11) NOT NULL,
   `team_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Dumping data for table `team_user`
---
-
-INSERT INTO `team_user` (`relacao_id`, `team_id`, `user_id`) VALUES
-(1, 5, 2),
-(3, 5, 3),
-(4, 5, 4);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
 
@@ -153,16 +123,7 @@ CREATE TABLE `user` (
   `sex` varchar(10) COLLATE latin1_general_cs NOT NULL,
   `photo` varchar(1000) COLLATE latin1_general_cs NOT NULL,
   `website` varchar(100) COLLATE latin1_general_cs DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_id`, `name`, `username`, `email`, `password`, `birth`, `sex`, `photo`, `website`) VALUES
-(2, 'Sérgio', 'thridenx', 'thridenx@hotmail.com', '123', '1994-04-12', 'male', '', NULL),
-(3, 'Jéssica que não acabou', 'jekas', 'jekas@lalala.com', 'jekona', '2015-12-01', 'fêmea', '', NULL),
-(4, 'Troy', 'boytoynamedtroy', 'troyzito@ratos.com', 'ratacona', '1994-04-13', 'macho', '', NULL);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 --
 -- Indexes for dumped tables
@@ -240,27 +201,32 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `chat_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `chat_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `meeting`
 --
 ALTER TABLE `meeting`
-  MODIFY `meeting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `meeting_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `meeting_topic`
 --
 ALTER TABLE `meeting_topic`
   MODIFY `meeting_topic_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `team_user`
 --
 ALTER TABLE `team_user`
-  MODIFY `relacao_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `relacao_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `topic`
 --
@@ -270,7 +236,7 @@ ALTER TABLE `topic`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
