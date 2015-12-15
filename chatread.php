@@ -29,7 +29,7 @@ if ($result_message_query){
     }
 }
 else{
-    echo "nao existem mensagens";
+    //nao existem mensagens;
 }        
 
 
