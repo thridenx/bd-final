@@ -2,6 +2,7 @@
 require('ref.php');
 require('init.php');
 
+
 ?>
 
  <html>
@@ -9,8 +10,8 @@ require('init.php');
     <body>
         <?php include 'header.php'?>
     	<h3> Ups, ocorreu um erro...</h3>
-    	<h5>Username, password e Nome têm de ser preenchidos!</h5>
-    	<a href="registar.php">voltar</a>
+    	<h5>Confirme a password!</h5>
+    	<a href="registo.php">voltar</a>
 
 
 

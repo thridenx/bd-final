@@ -13,12 +13,11 @@ $sex=$_POST['sex'];
 //$user = stripslashes($username);
 echo $username;
 
-if ($username=='' or $password=='' or $name=='' or $username==' ' or $password==' ' or $name==' '){ //Certificar mesmo que não acontece 
+if ($username=='' or $password=='' or $name=='' or $username==' ' or $password==' ' or $name==' '){ //Verificar se este branco ou com espaço
 	echo '<meta http-equiv="refresh" content="2; URL=erro_inserir_pass_username.php">';
 }
 else if($password!=$password2){
-	echo 'Confirme novamente a sua password!
-	<meta http-equiv="refresh" content="2; URL=registo.php">';
+	echo '<meta http-equiv="refresh" content="2; URL=erro_confirmar_password.php">'; //Confirmar password
 }
 
 else{
