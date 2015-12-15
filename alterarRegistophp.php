@@ -13,7 +13,7 @@ $emailPrev=$_POST['email'];
 $websitePrev=$_POST['website'];
 
 
-if (($password2==$password3) and ($password1!='')){
+if (($password2==$password3) and ($password1!=''){
 
 	$sql = "SELECT password FROM user WHERE user_id = '".$user_id."' and password = '".$password1."' ";
 	$result = mysqli_query($db_select, $sql);
@@ -54,28 +54,18 @@ if (($password2==$password3) and ($password1!='')){
 				echo 'alterado com sucesso! <meta http-equiv="refresh" content="0; URL=perfilUser.php">';
 
 			}else{
-				echo 'Ocorreu um erro, tente novamente!';
+				echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 			}
 		}
 		else{
-			echo "Password incorreta!";
+			echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 		}
 	
 	}
-	/*
-	else if (($password1!='')& ($password2!='')){
-		echo "Confirme a sua password atual e diga qual é a sua nova!";
-	}
-	else if (($password1!='')& ($password2!='') & ($password2!='')){
-		echo $password0;
-		echo $password2;
-		echo $
-		$passwordPrev=$password;
-		echo $passwordPrev;
-	}*/
+
 }
 else{
-	echo "Confirme a sua password!";
+	echo '<meta http-equiv="refresh" content="0; URL=erro_confirmar_password.php">';
 }
 
 ?>
